@@ -9,8 +9,8 @@
         <item name="colorPrimary">@color/darkBrown</item>
         <item name="colorPrimaryDark">@color/brown</item>
         <item name="colorAccent">@color/lightGray</item>
-        <item name = "android:background">@color/medGray</item>
-        <item name ="android:actionBarItemBackground">@color/darkGray</item>
+        <item name = "android:background">@color/darkGray</item>
+       <!-- <item name ="android:actionBarItemBackground">@color/brown</item> -->
     </style>
 
 
