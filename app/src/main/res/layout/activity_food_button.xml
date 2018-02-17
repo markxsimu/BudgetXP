@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context="com.example.markxsimu.budgetxp.FoodButtonActivity">
 
+    <TextView
+        android:id="@+id/FoodBudgetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <TextView
+        android:id="@+id/totalFood"
+        android:layout_width="180dp"
+        android:layout_height="27dp"
+        android:text="@string/totalFood"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <TextView
+        android:id="@+id/TotalFoodAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <TextView
+        android:id="@+id/FoodBudget"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/foodBudget"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <TextView
+        android:id="@+id/FoodBudgetAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="123dp" />
+
 </android.support.constraint.ConstraintLayout>
