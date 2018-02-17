@@ -2,4 +2,12 @@
     <string name="app_name">Welcome</string>
     <string name="Menu">Menu</string>
     <string name="Budget">Budget</string>
+
+    <string name="Food">Food</string>
+    <string name="Tolls">Tolls</string>
+    <string name="Gas">Gas</string>
+    <string name="Rent">Rent</string>
+    <string name="Social">Budget</string>
+
+    <string name="Clothes">Budget</string>
 </resources>
