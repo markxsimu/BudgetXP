@@ -4,10 +4,24 @@
     <string name="Budget">Budget</string>
 
     <string name="Food">Food</string>
-    <string name="Tolls">Tolls</string>
+    <string name="Other">Other</string>
     <string name="Gas">Gas</string>
-    <string name="Rent">Rent</string>
-    <string name="Social">Budget</string>
+    <string name="Bill">Bill</string>
+    <string name="Social">Social</string>
+    <string name="Clothes">Clothes</string>
+    <string name="homeBudget">$0.00</string>
+    <string name="expenseTot">Enter Expense</string>
+    <string name="homeCat">Categories</string>
+    <string name="submit">SUBMIT</string>
 
-    <string name="Clothes">Budget</string>
+
+    <string-array name="cat_array">
+        <item>Food</item>
+        <item>Gas</item>
+        <item>Social</item>
+        <item>Rent</item>
+        <item>Clothes</item>
+        <item>Tolls</item>
+        <item>Clothes</item>
+    </string-array>
 </resources>

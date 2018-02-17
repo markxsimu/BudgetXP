@@ -13,7 +13,7 @@
     </include>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/homeBal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,45 +22,61 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:text="Budget Balance:"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        android:text="Budget"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/dollarLocation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_bar"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintVertical_bias="0.68" />
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/expenseTot"
+        android:layout_width="92dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/expenseTot"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/categoriesTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollarLocation"
+        app:layout_constraintVertical_bias="0.121"
+        tools:text="Add Expense" />
+
+    <TextView
+        android:id="@+id/dollarLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/homeBal"
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="$0.00"
+        android:hint="@string/homeBudget"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_bar" />
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="648dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText">
+        app:layout_constraintTop_toBottomOf="@+id/categoriesTitle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,16 +84,12 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/SocialButton"
+                android:id="@+id/FoodButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/FoodButton"
-                android:text="SOCIAL"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/RentButton"
-                tools:layout_editor_absoluteX="0dp" />
+                android:text="@string/Food"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/RentButton"
@@ -87,13 +99,48 @@
                 android:layout_alignTop="@+id/FoodButton"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
-                android:text="RENT"
+                android:text="@string/Bill"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/TollsButton"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/GasButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="@string/Gas"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ClothesButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/FoodButton"
+                android:layout_below="@+id/SocialButton"
+                android:text="@string/Clothes"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/TollsButton"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <Button
+                android:id="@+id/SocialButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/FoodButton"
+                android:text="@string/Social"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/RentButton"
+                tools:layout_editor_absoluteX="0dp" />
 
             <Button
                 android:id="@+id/TollsButton"
@@ -103,56 +150,78 @@
                 android:layout_alignBottom="@+id/ClothesButton"
                 android:layout_alignStart="@+id/GasButton"
                 android:fontFamily="sans-serif-medium"
-                android:text="TOLLS"
+                android:text="@string/Other"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/FoodButton" />
 
-            <Button
-                android:id="@+id/ClothesButton"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignStart="@+id/FoodButton"
-                android:layout_below="@+id/SocialButton"
-                android:text="CLOTHES"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/TollsButton"
-                tools:layout_editor_absoluteX="0dp" />
 
-            <Button
-                android:id="@+id/GasButton"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_above="@+id/ClothesButton"
-                android:layout_alignStart="@+id/RentButton"
-                android:layout_marginEnd="144dp"
-                android:layout_marginTop="460dp"
-                android:text="GAS"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-            <Button
-                android:id="@+id/FoodButton"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_below="@+id/editText"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="568dp"
-                android:layout_toStartOf="@+id/textView"
-                android:fontFamily="sans-serif-medium"
-                android:text="Food"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/GasButton"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
         </LinearLayout>
     </ScrollView>
+
+    <EditText
+        android:id="@+id/expenseAmount"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/catSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/catSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/expenseTot"
+        app:layout_constraintTop_toBottomOf="@+id/dollarLocation" />
+
+    <TextView
+        android:id="@+id/categoriesTitle"
+        android:layout_width="128dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/homeCat"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseAmount" />
+
+    <Spinner
+        android:id="@+id/catSpinner"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout ="@layout/cat_spinner"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:popupBackground="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/expenseTot"
+        app:layout_constraintTop_toBottomOf="@+id/dollarLocation"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toTopOf="@+id/categoriesTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/catSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/dollarLocation"
+        app:layout_constraintVertical_bias="0.246" />
 
 </android.support.constraint.ConstraintLayout>
