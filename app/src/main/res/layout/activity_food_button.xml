@@ -39,7 +39,7 @@
 
     <TextView
         android:id="@+id/FoodBudget"
-        android:layout_width="110dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:text="@string/foodBudget"
         android:textSize="18sp"
@@ -50,9 +50,44 @@
         android:id="@+id/FoodBudgetAmt"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:text="TextView"
+        android:text="$0.00"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="123dp" />
+
+    <TextView
+        android:id="@+id/RemainingFood"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/remainingExp"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/RemainFoodAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expFeed"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <ListView
+        android:layout_width="368dp"
+        android:layout_height="275dp"
+        android:entries="@drawable/dark_g_rectangle"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="288dp" />
 
 </android.support.constraint.ConstraintLayout>
