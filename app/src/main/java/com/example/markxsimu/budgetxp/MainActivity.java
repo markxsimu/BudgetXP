@@ -27,6 +27,20 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.cat_spinner);
         spinner.setAdapter(adapter);
 
+        //set button collors
+        Button foodButton = (Button)findViewById(R.id.FoodButton);
+        Button gasButton = (Button)findViewById(R.id.GasButton);
+        Button billButton = (Button)findViewById(R.id.BillButton);
+        Button clothesButton = (Button)findViewById(R.id.ClothesButton);
+        Button socialButton = (Button)findViewById(R.id.SocialButton);
+        Button otherButton = (Button)findViewById(R.id.OtherButton);
+        foodButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        gasButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        billButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        clothesButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        socialButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        otherButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+        foodButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
 
     }
 
