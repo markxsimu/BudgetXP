@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:textSize="18sp"
     android:gravity="center"
-    android:textColor="@color/brown"
+    android:textColor="@color/black"
     android:background="@drawable/rectangle"
     android:popupBackground="@drawable/rectangle"
     />

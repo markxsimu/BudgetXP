@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="veryLightGray">#D5DBE5</color>
     <color name="lightGray">#b2bed0</color>
     <color name="medGray">#93a3bc</color>
     <color name="darkGray">#8693ab</color>

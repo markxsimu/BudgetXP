@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightGray"
+    android:background="@color/veryLightGray"
     tools:context="com.example.markxsimu.budgetxp.MainActivity">
 
     <include
@@ -64,7 +64,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/dark_g_rectangle"
-        android:textColor="@color/brown"
+        android:textColor="@color/black"
         android:ems="10"
         android:text="@string/homeBudget"
         android:textAlignment="center"
@@ -82,11 +82,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:textColor="@color/brown"
+        android:textColor="@color/black"
         android:ems="10"
         android:hint="$0.00"
         android:inputType="numberDecimal"
-        android:backgroundTint="@color/brown"
+        android:backgroundTint="@color/black"
         android:textCursorDrawable="@drawable/cursor"
         app:layout_constraintBottom_toTopOf="@+id/catSpinner"
         app:layout_constraintEnd_toStartOf="@+id/catSpinner"
@@ -137,7 +137,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/rectangle"
         android:text="@string/submit"
-        android:textColor="@color/brown"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/categoriesTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
@@ -153,7 +153,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/lightGray"
+        android:background="@color/veryLightGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -175,11 +175,11 @@
                 android:layout_height="100dp"
                 android:text="@string/Food"
                 android:textAllCaps="false"
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:id="@+id/BillButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -191,7 +191,7 @@
                 android:textSize="18sp"/>
 
             <Button
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:id="@+id/GasButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -201,7 +201,7 @@
                 android:textSize="18sp" />
 
             <Button
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:id="@+id/ClothesButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -212,7 +212,7 @@
                 android:textSize="18sp"/>
 
             <Button
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:id="@+id/SocialButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -223,7 +223,7 @@
                 android:textSize="18sp"/>
 
             <Button
-                android:textColor="@color/brown"
+                android:textColor="@color/black"
                 android:id="@+id/OtherButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
