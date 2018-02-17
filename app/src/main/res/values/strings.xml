@@ -13,7 +13,19 @@
     <string name="expenseTot">Add Expense</string>
     <string name="homeCat">Categories</string>
     <string name="submit">SUBMIT</string>
-    
+    <string name="Activity">Activity</string>
+    <string name="foodBudget">Food Budget:</string>
+    <string name="billBudget">Bills Budget:</string>
+    <string name="actBudget">Activities Budget:</string>
+    <string name="gasBudget">Gas Budget:</string>
+    <string name="clothesBudget">Clothes Budget:</string>
+    <string name="otherBudget">Other Budget:</string>
+    <string name="totalFood">Total Food Expenses:</string>
+    <string name="totalBill">Total Bill Expenses:</string>
+    <string name="totalAct">Total Activity Expenses:</string>
+    <string name="totalGas">Total Gas Expenses</string>
+    <string name="totalClothes">Total Clothes Expenses:</string>
+    <string name="totalOther">Total Other Expenses:</string>
 
     <string-array name="cat_array">
         <item>Food</item>
