@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/veryLightGray"
+        tools:context="com.example.markxsimu.budgetxp.BillActivity">
+
+        <Button
+            android:id="@+id/deleteBil"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/r_rectangle"
+            android:text="@string/delete"
+            app:layout_constraintBaseline_toBaselineOf="@+id/saveData"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.657"
+            app:layout_constraintStart_toEndOf="@+id/saveData" />
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"></include>
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="304dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/viewData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/r_rectangle"
+            android:text="@string/viewData"
+            app:layout_constraintBaseline_toBaselineOf="@+id/addBill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.657"
+            app:layout_constraintStart_toEndOf="@+id/addBill" />
+
+        <Button
+            android:id="@+id/addBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="436dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/g_rectangle"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.182"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/saveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/g_rectangle"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editData"
+            app:layout_constraintVertical_bias="0.41" />
+</android.support.constraint.ConstraintLayout>
