@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toolbar;
 
 /**
  * Created by markxsimu on 2/17/18.
@@ -35,7 +34,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(word + TABLE_NAME);
         onCreate(db);
     }
-    public boolean addData(String item){
+    public boolean addData(String item, int sel){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, item);

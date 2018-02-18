@@ -28,7 +28,11 @@
     <string name="totalOther">Total Other Expenses:</string>
     <string name="remainingExp">Remaining Expenses:</string>
     <string name="expFeed">Expenses:</string>
-
+    <string name="viewFeed">Press To View Feed</string>
+    <string name="expButton">Expenses</string>
+    <string name="expType">Exp Type</string>
+    <string name="expAmt">Expense Amount</string>
+    <string name="date">Date</string>
 
 
 

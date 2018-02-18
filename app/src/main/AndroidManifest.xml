@@ -19,9 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodButtonActivity" />
-        <activity android:name=".BillActivity"></activity>
-        <activity android:name=".ListDataActivity"></activity>
-        <activity android:name=".EditDataActivity"></activity>
+        <activity android:name=".ListDataActivity" />
+        <activity android:name=".ExpFeedActivity"></activity>
     </application>
 
 </manifest>
