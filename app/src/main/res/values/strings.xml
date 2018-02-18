@@ -26,6 +26,8 @@
     <string name="totalGas">Total Gas Expenses</string>
     <string name="totalClothes">Total Clothes Expenses:</string>
     <string name="totalOther">Total Other Expenses:</string>
+    <string name="remainingExp">Remaining Expenses:</string>
+    <string name="expFeed">Expenses:</string>
 
 
 
