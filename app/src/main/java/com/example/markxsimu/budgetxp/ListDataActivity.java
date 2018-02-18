@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Debug;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,6 +31,8 @@ public class ListDataActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listdata);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
         mListView =(ListView)findViewById(R.id.listView);
         mDatabaseHelper=new DataBaseHelper(this);
         populateListView();
@@ -43,6 +46,7 @@ public class ListDataActivity extends AppCompatActivity {
             //get val from data in col 1
             //add it to the arraylist
             listData.add(data.getString(1));
+            ;
         }
         //create list adapter and set adapter
         ListAdapter adapter =new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listData);
