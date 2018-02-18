@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,5 +73,11 @@ public class MainActivity extends AppCompatActivity {
                 //return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void FoodButton(View view){
+        Intent intent = new Intent(MainActivity.this, FoodButtonActivity.class);
+        startActivity(intent);
     }
 }
