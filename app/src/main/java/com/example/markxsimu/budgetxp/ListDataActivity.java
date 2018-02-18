@@ -3,6 +3,7 @@ package com.example.markxsimu.budgetxp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,20 +23,21 @@ import java.util.ArrayList;
 public class ListDataActivity extends AppCompatActivity {
 
     private static final String TAG = "ListDataActivity";
-    DataBaseHelper mDatabaseHeler;
+    DataBaseHelper mDatabaseHelper;
     private ListView mListView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listdata);
-        mDatabaseHeler=new DataBaseHelper(this);
+        mListView =(ListView)findViewById(R.id.listView);
+        mDatabaseHelper=new DataBaseHelper(this);
         populateListView();
     }
 
     private void populateListView() {
         Log.d(TAG, "populateListView: Displaying data in the listView");
-        Cursor data = mDatabaseHeler.getData();
+        Cursor data = mDatabaseHelper.getData();
         ArrayList<String> listData = new ArrayList<>();
         while(data.moveToNext()){
             //get val from data in col 1
@@ -46,13 +48,13 @@ public class ListDataActivity extends AppCompatActivity {
         ListAdapter adapter =new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listData);
 
         mListView.setAdapter(adapter);
-
+        Log.v("YOYOYOYOYOYOYOYOYO","FUCK");
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String name = adapterView.getItemAtPosition(i).toString();
                 Log.d(TAG,"onClick; you clicked on " +name);
-                Cursor data = mDatabaseHeler.getItemID(name);
+                Cursor data = mDatabaseHelper.getItemID(name);
                 int itemID =-1;
                 while(data.moveToNext()){
                     itemID = data.getInt(0);

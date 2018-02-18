@@ -28,6 +28,7 @@ public class EditDataActivity extends AppCompatActivity {
         btnSave = (Button) findViewById(R.id.saveData);
         btnDelete = (Button) findViewById(R.id.deleteData);
         editable_item = (EditText)findViewById(R.id.editData);
+        mDatabaseHelper =new DataBaseHelper(this);
 
         //get intent extra from listDataActivity
         Intent recievedIntent = getIntent();
@@ -50,6 +51,14 @@ public class EditDataActivity extends AppCompatActivity {
                 }else{
                     toastMessage("You must enter a name");
                 }
+            }
+        });
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDatabaseHelper.deleteName(selectedID,selectedName);
+                editable_item.setText("");
+                toastMessage("removed from database");
             }
         });
     }

@@ -15,10 +15,9 @@ import android.widget.Toolbar;
 public class DataBaseHelper extends SQLiteOpenHelper {
     private  static final String TAG = "DatabaseHelper";
 
-    private  static final String TABLE_NAME = "expense_table";
+    private  static final String TABLE_NAME = "Expenses";
     private  static final String COL1 = "ID";
     private  static final String COL2 = "name";
-    private  static final String DROP_TABLE = "DROP IF TABLE EXISTS";
 
 
 
@@ -27,12 +26,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE" + TABLE_NAME + "( ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COL2 + " TEXT)";
+        String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " + COL2 + " TEXT)";
         db.execSQL(createTable);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL(DROP_TABLE+" "+TABLE_NAME);
+        String word = "DROP IF TABLE EXISTS ";
+        db.execSQL(word + TABLE_NAME);
         onCreate(db);
     }
     public boolean addData(String item){
@@ -58,7 +58,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public Cursor getItemID(String name){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + COL1 + "FROM "+ TABLE_NAME + " WHERE "+COL2 + " = '"+name +"'";
+        String query = "SELECT " + COL1 + " FROM "+ TABLE_NAME +
+                " WHERE " + COL2 + " = '" + name +"'";
         Cursor data =db.rawQuery(query, null);
         return data;
     }
@@ -70,10 +71,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         Log.d(TAG,"updateName: Setting nae to " + newName );
         db.execSQL(query);
     }
-    public void delete(int id, String name){
+    public void deleteName(int id, String name){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_NAME + " WHERE "
                 + COL1 + " = '" + id + "'" +
                 " AND " + COL2 + " = '"+name +"'";
+        db.execSQL(query);
     }
 }

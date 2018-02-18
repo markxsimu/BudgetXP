@@ -40,7 +40,7 @@ public class BillActivity extends AppCompatActivity {
         btnViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BillActivity.this, ListActivity.class);
+                Intent intent = new Intent(BillActivity.this, ListDataActivity.class);
                 startActivity(intent);
             }
         });
