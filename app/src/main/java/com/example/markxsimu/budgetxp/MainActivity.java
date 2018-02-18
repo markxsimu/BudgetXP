@@ -1,5 +1,6 @@
 package com.example.markxsimu.budgetxp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,9 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.sql.DatabaseMetaData;
 
 public class MainActivity extends AppCompatActivity {
-    EditText dollarLoc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
         otherButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
         foodButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
 
+
+
+
+
+       // btnAdd =
+
     }
 
 
@@ -54,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menuOpt:
+                Intent intent = new Intent(this, BillActivity.class);
+                //Toast.makeText(MainActivity.this,"Share", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+                //return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
