@@ -1,5 +1,6 @@
 package com.example.markxsimu.budgetxp;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -54,7 +55,18 @@ public class ListDataActivity extends AppCompatActivity {
                 Cursor data = mDatabaseHeler.getItemID(name);
                 int itemID =-1;
                 while(data.moveToNext()){
-                    
+                    itemID = data.getInt(0);
+
+                }
+                if(itemID>-1){
+                    Log.v(TAG,"onItemClicked: The ID is: "+ itemID);
+                    Intent editScreenIntent = new Intent(ListDataActivity.this, EditDataActivity.class);
+                    editScreenIntent.putExtra("id", itemID);
+                    editScreenIntent.putExtra("name",name);
+                    startActivity(editScreenIntent);
+                }
+                else{
+                    toastMessage("No ID Associated with that name");
                 }
             }
         });

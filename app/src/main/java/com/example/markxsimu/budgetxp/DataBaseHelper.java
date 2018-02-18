@@ -62,4 +62,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         Cursor data =db.rawQuery(query, null);
         return data;
     }
+    public void updateName(String newName, int id, String oldName){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "UPDATE "+ TABLE_NAME + " SET "+ COL2 + " = '" + newName + "' WHERE "+ COL1 + " =  '"+id+ "'"+ " AND "+COL2 + " = '"+oldName+"'";
+
+        Log.d(TAG,"updateName: query: "+ query );
+        Log.d(TAG,"updateName: Setting nae to " + newName );
+        db.execSQL(query);
+    }
+    public void delete(int id, String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE_NAME + " WHERE "
+                + COL1 + " = '" + id + "'" +
+                " AND " + COL2 + " = '"+name +"'";
+    }
 }

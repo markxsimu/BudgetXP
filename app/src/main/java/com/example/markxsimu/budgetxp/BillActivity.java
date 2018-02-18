@@ -19,7 +19,7 @@ public class BillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
 
-        editText = (EditText) findViewById(R.id.editTextBill);
+        editText = (EditText) findViewById(R.id.editData);
         btnAdd = (Button) findViewById(R.id.addBill);
         btnViewData = (Button) findViewById(R.id.viewData);
         mDatabaseHelper = new DataBaseHelper(this);
