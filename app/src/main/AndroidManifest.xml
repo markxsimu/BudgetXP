@@ -19,8 +19,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".FoodButtonActivity" />
+<<<<<<< HEAD
         <activity android:name=".ListDataActivity" />
         <activity android:name=".ExpFeedActivity"></activity>
+=======
+        <activity android:name=".BillActivity" />
+        <activity android:name=".ListDataActivity" />
+        <activity android:name=".EditDataActivity" />
+        <activity android:name=".OtherActivity"></activity>
+>>>>>>> f1c14cb41e3233153a82b51dc6ecdabf0f14dd5c
     </application>
 
 </manifest>

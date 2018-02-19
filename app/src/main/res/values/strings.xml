@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Welcome</string>
+    <string name="app_name"></string>
     <string name="Menu">Menu</string>
     <string name="Budget">Budget</string>
 
@@ -33,8 +33,6 @@
     <string name="expType">Exp Type</string>
     <string name="expAmt">Expense Amount</string>
     <string name="date">Date</string>
-
-
 
     <string name="viewData">viewData</string>
     <string name="add">Add</string>
