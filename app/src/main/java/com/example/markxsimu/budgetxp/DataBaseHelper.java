@@ -34,7 +34,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(word + TABLE_NAME);
         onCreate(db);
     }
-    public boolean addData(String item, int sel){
+    public boolean addData(String item){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, item);

@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void AddData(String newEntry, int sel) { //boolean insertData = mDatabaseHelper.addData(newEntry,"02/16/2018");
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        mDatabaseHelper.addData(newEntry, sel);
+        mDatabaseHelper.addData(newEntry);
     }
 
     @Override
