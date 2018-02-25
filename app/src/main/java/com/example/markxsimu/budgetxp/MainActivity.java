@@ -14,8 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.DatabaseMetaData;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,11 +37,16 @@ public class MainActivity extends AppCompatActivity {
     public Button btnViewGas;
     public Button btnViewOther;
     public Spinner cat;
+    public float totalSum;
     public int sel = 5;
+    final static String budgetFile = "budget_file";
+
+    String[] budgetArray = {"0","0","0","0","0"};
 
 
 
     DataBaseHelper mDatabaseHelper;
+    TextView dollarLocation;
 
 
     @Override
@@ -58,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         cat = (Spinner) findViewById(R.id.catSpinner);
         final EditText editAm = findViewById(R.id.expenseAmount);
 
-
+        dollarLocation = (TextView) findViewById(R.id.dollarLocation);
         btnAdd = findViewById(R.id.button_submit);
         //btnViewFood =  findViewById(R.id.FoodButton);
         btnViewBill = findViewById(R.id.BillButton);
@@ -92,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
         socialButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
         btnViewOther.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
         foodButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
+
+
+        readAmount();
     }
     public void GetSpinItem(int num) {
 
@@ -111,6 +125,20 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menuOpt :
+                Intent menuOpt = new Intent(MainActivity.this, MenuOption.class);
+                startActivity(menuOpt);
+                return true;
+            default:
+                Intent defOpt = new Intent(MainActivity.this, MenuOption.class);
+                startActivity(defOpt);
+                return true;
+        }
+    }
+
 
     public void FoodButton(View view) {
         Intent intent = new Intent(MainActivity.this, FoodButtonActivity.class);
@@ -119,5 +147,35 @@ public class MainActivity extends AppCompatActivity {
 
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    public void readAmount(){
+        try {
+            String Message;
+            FileInputStream fileInputStream = openFileInput(budgetFile);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuffer stringBuffer = new StringBuffer();
+            int counter = 0;
+            totalSum = 0f;
+            while((Message=bufferedReader.readLine())!=null && counter<5){
+                //stringBuffer.append(Message +"\n");
+                budgetArray[counter]=Message.toString();
+                Log.v(Integer.toString(counter),budgetArray[counter]);
+                totalSum += Float.parseFloat(budgetArray[counter]);
+                counter++;
+            }
+            String sum =String.format("%.2f",totalSum);
+            dollarLocation.setText("$"+sum);
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

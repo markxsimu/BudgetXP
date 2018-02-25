@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/veryLightGray"
+    tools:context="com.example.markxsimu.budgetxp.MenuOption">
+
+    <TextView
+        android:id="@+id/app_bar_menu"
+        android:text="Budget Info"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"/>
+    <TextView
+
+        android:id="@+id/totalBudgetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_menu"
+        android:gravity="center_vertical"
+        android:text="@string/totalBudget"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/totalBudgetAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/totalBudgetValue"
+        android:layout_below="@id/app_bar_menu"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:layout_toLeftOf="@id/totalbuttonbudget"
+        android:background="@drawable/rectangle"/>
+    <Button
+        android:id="@+id/totalbuttonbudget"
+        android:visibility="invisible"
+        android:layout_below="@id/app_bar_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/g_rectangle"
+        android:text="@string/save"/>
+
+
+    <TextView
+
+        android:id="@+id/totalFoodTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalBudgetAmount"
+        android:gravity="center_vertical"
+        android:text="@string/foodBudget"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@id/TotalFoodAmount"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/totalFoodAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalBudgetAmount"
+        android:textSize="15dp"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:layout_toLeftOf="@id/foodSave"
+        android:background="@drawable/rectangle"/>
+    <Button
+        android:id="@+id/foodSave"
+        android:layout_below="@id/totalBudgetAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/g_rectangle"
+        android:text="@string/save"/>
+    <View
+        android:layout_below="@id/totalFoodAmount"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:id="@+id/view"/>
+
+    <TextView
+
+        android:id="@+id/totalBillTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodSave"
+        android:gravity="center_vertical"
+        android:text="@string/billBudget"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/view"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/totalBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodSave"
+        android:textSize="15dp"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/brown"
+        android:layout_toLeftOf="@id/foodSave"
+        android:background="@drawable/rectangle"/>
+    <Button
+        android:id="@+id/billSave"
+        android:layout_below="@id/foodSave"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/g_rectangle"
+        android:text="@string/save"/>
+    <View
+        android:layout_below="@id/billSave"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:id="@+id/view2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view2"
+        android:layout_centerHorizontal="true"
+        android:text="HOME"
+        android:id="@+id/menuHome"
+        android:background="@drawable/g_rectangle"
+        />
+</RelativeLayout>
