@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         //btnViewFood =  findViewById(R.id.FoodButton);
         btnViewBill = findViewById(R.id.BillButton);
         btnViewOther = findViewById(R.id.OtherButton);
+        btnViewGas = findViewById(R.id.GasButton);
         btnAdd.setOnClickListener(new View.OnClickListener() {
 
             @Override
