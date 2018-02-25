@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/app_bar_menu"
+        layout="@layout/app_bar"
         android:text="Budget Info"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -50,15 +51,20 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/g_rectangle"
         android:text="@string/save"/>
-
+    <View
+        android:visibility="invisible"
+        android:id="@+id/filler"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/totalbuttonbudget"/>
 
     <TextView
 
         android:id="@+id/totalFoodTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/totalBudgetAmount"
-        android:gravity="center_vertical"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:gravity="bottom"
+        android:layout_below="@id/filler"
         android:text="@string/foodBudget"
         android:textColor="@color/black"
         android:layout_toLeftOf="@id/TotalFoodAmount"
@@ -66,22 +72,24 @@
         android:textStyle="bold" />
     <EditText
         android:id="@+id/totalFoodAmount"
+        android:paddingRight="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/totalBudgetAmount"
+        android:layout_below="@id/filler"
         android:textSize="15dp"
         android:hint="Enter Amount"
         android:inputType="numberDecimal"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/brown"
-        android:layout_toLeftOf="@id/foodSave"
-        android:background="@drawable/rectangle"/>
+        android:layout_toRightOf="@id/totalFoodTitle"
+        android:backgroundTint="@color/black"
+        android:textCursorDrawable="@drawable/cursor"/>
     <Button
         android:id="@+id/foodSave"
-        android:layout_below="@id/totalBudgetAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/filler"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:background="@drawable/g_rectangle"
         android:text="@string/save"/>
@@ -90,14 +98,20 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:id="@+id/view"/>
+    <View
+        android:visibility="invisible"
+        android:id="@+id/filler2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/foodSave"/>
 
     <TextView
 
         android:id="@+id/totalBillTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/foodSave"
-        android:gravity="center_vertical"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:gravity="bottom"
+        android:layout_below="@id/filler2"
         android:text="@string/billBudget"
         android:textColor="@color/black"
         android:layout_toRightOf="@id/view"
@@ -109,21 +123,23 @@
         android:id="@+id/totalBillAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/foodSave"
+        android:layout_below="@id/filler2"
+        android:paddingRight="40dp"
         android:textSize="15dp"
         android:hint="Enter Amount"
         android:inputType="numberDecimal"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/brown"
-        android:layout_toLeftOf="@id/foodSave"
-        android:background="@drawable/rectangle"/>
+        android:layout_toRightOf="@id/totalBillTitle"
+        android:backgroundTint="@color/black"
+        android:textCursorDrawable="@drawable/cursor"/>
     <Button
         android:id="@+id/billSave"
-        android:layout_below="@id/foodSave"
+        android:layout_below="@id/filler2"
         android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:background="@drawable/g_rectangle"
         android:text="@string/save"/>
     <View

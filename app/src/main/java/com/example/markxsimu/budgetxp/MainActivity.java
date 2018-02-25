@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         btnViewOther.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
         foodButton.setBackground(getResources().getDrawable(R.drawable.g_rectangle));
 
-
+        //deleteFile();
         readAmount();
     }
     public void GetSpinItem(int num) {
@@ -176,6 +177,13 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+    private void deleteFile(){
+        File dir = getFilesDir();
+        File file = new File(dir,budgetFile);
+        boolean deleted = file.delete();
+        toastMessage("Files deleted");
 
     }
 }

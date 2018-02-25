@@ -81,7 +81,7 @@ public class MenuOption extends AppCompatActivity {
             }
         });
 
-        //deleteFile();
+
         readAmount();
 
     }
@@ -139,8 +139,8 @@ public class MenuOption extends AppCompatActivity {
         totalAmountText.setText("$"+sum);
         String foodsum = String.format("%.2f",Double.parseDouble(budgetArray[0]));
         String billsum = String.format("%.2f",Double.parseDouble(budgetArray[1]));
-        foodAmountText.setText("$"+foodsum);
-        billAmountText.setText("$"+billsum);
+        foodAmountText.setText(foodsum);
+        billAmountText.setText(billsum);
     }
     private void deleteFile(){
         File dir = getFilesDir();

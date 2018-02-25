@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/dollarLocation"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:gravity="center"
         android:layout_below="@+id/homeBal"
